@@ -1,19 +1,20 @@
-const loginText = document.querySelector(".title-text .login");
-const loginForm = document.querySelector("form.login");
-const loginBtn = document.querySelector("label.login");
-const signupBtn = document.querySelector("label.signup");
-const signupLink = document.querySelector("form .signup-link a");
-signupBtn.onclick = (() => {
-    loginForm.style.marginLeft = "-50%";
-    loginText.style.marginLeft = "-50%";
-});
-loginBtn.onclick = (() => {
-    loginForm.style.marginLeft = "0%";
-    loginText.style.marginLeft = "0%";
-    window.location("homePage.html");
-});
-signupLink.onclick = (() => {
-    signupBtn.click();
-    return false;
+let usernameEl = document.getElementById("username");
+let passwordEl = document.getElementById("password");
+let formEl = document.getElementById("myForm");
+
+formEl.addEventListener("submit", function(event){
+    event.preventDefault();
+    window.location = "homePage.html";
 });
 
+function login(){
+    let username = usernameEl.value;
+    let password = passwordEl.value;
+    console.log(username);
+    console.log(password);
+    if(username === 'Admin' && password === 'Admin@123'){
+        window.alert("Successfully logged in..!!");
+    }else{
+        window.alert("Invalid Username or Password");
+    }
+}
