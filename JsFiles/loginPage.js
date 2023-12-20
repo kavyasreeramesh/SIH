@@ -1,21 +1,26 @@
-let usernameEl = document.getElementById("username");
-let passwordEl = document.getElementById("password");
-let formEl = document.getElementById("myForm");
 
-formEl.addEventListener("submit", function(event){
-    event.preventDefault();
-    
+
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
+
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
 });
 
-function login(){
-    let username = usernameEl.value;
-    let password = passwordEl.value;
-    console.log(username);
-    console.log(password);
-    if(username === 'Admin' && password === 'Admin@123'){
-        alert("Successfully logged in..!!");
-        window.location = "../HtmlFiles/homePage.html";
-    }else{
-        alert("Invalid Username or Password");
-    }
-}
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
+});
+
+
+$("#search-icon").click(function() {
+  $(".nav").toggleClass("search");
+  $(".nav").toggleClass("no-search");
+  $(".search-input").toggleClass("search-active");
+});
+
+$('.menu-toggle').click(function(){
+   $(".nav").toggleClass("mobile-nav");
+   $(this).toggleClass("is-active");
+});
+
