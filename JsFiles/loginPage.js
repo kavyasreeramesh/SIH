@@ -4,7 +4,7 @@ let formEl = document.getElementById("myForm");
 
 formEl.addEventListener("submit", function(event){
     event.preventDefault();
-    window.location = "homePage.html";
+    
 });
 
 function login(){
@@ -13,8 +13,9 @@ function login(){
     console.log(username);
     console.log(password);
     if(username === 'Admin' && password === 'Admin@123'){
-        window.alert("Successfully logged in..!!");
+        alert("Successfully logged in..!!");
+        window.location = "../HtmlFiles/homePage.html";
     }else{
-        window.alert("Invalid Username or Password");
+        alert("Invalid Username or Password");
     }
 }
