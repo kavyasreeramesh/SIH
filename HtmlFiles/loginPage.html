@@ -27,19 +27,19 @@
                 <div class="slider-tab"></div>
             </div>
             <div class="form-inner">
-                <form action="#" class="login">
+                <form id="myForm" action="#" class="login">
                     <div class="field">
-                        <input type="text" placeholder="Email Address" required>
+                        <input type="text" id="username" placeholder="Email Address" required>
                     </div>
                     <div class="field">
-                        <input type="password" placeholder="Password" required>
+                        <input type="password" id="password" placeholder="Password" required>
                     </div>
                     <div class="pass-link">
                         <a href="#">Reset password?</a>
                     </div>
                     <div class="field btn">
                         <div class="btn-layer"></div>
-                        <button class="btn" onclick="homePage()">LogIn</button>
+                        <input type="submit" onclick="login()" value="SignIn">
                     </div>
                     <div class="signup-link">
                         Don't Have Account? <a href="">Create A New</a>
@@ -63,10 +63,8 @@
             </div>
         </div>
     </div>
-    <script>
-        function homePage(){
-            window.location = "homePage.html";
-        }
+    <script src="../JsFiles/loginPage.js">
+        
     </script>
 </body>
 
